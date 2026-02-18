@@ -3,7 +3,9 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+local packer = require("packer")
+
+return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -55,3 +57,7 @@ return require('packer').startup(function(use)
   }
 
 end)
+
+if packer_bootstrap then
+    packer.sync()
+end
