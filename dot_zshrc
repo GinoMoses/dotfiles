@@ -1,0 +1,26 @@
+# Created by newuser for 5.9
+#
+[[ $- != *i* ]] && return
+
+export EDITOR="/usr/bin/nvim"
+
+alias test="fastfetch | lolcat"
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ll='ls -la'
+alias vim='nvim'
+PROMPT='%n@%m %1~ %# '
+. "$HOME/.cargo/env"
+
+bindkey -e
+
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
+bindkey '^[OD' backward-word
+bindkey '^[OC' forward-word
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+
+eval "$(starship init zsh)"
