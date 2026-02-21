@@ -1,0 +1,4 @@
+{{ if contains .chezmoi.kernel.osrelease "microsoft" }}
+~/.config/alacritty/**
+~/.zshrc
+{{ end }}
