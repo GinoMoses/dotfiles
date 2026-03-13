@@ -3,7 +3,7 @@ return {
     {
       'MeanderingProgrammer/render-markdown.nvim',
       dependencies = { 'nvim-treesitter/nvim-treesitter' },
-      ft = { 'markdown', 'copilot-chat' },
+      ft = { 'markdown' },
         opts = {},
     },
 
@@ -77,25 +77,4 @@ return {
 
   -- snacks.nvim (required by claudecode)
   { 'folke/snacks.nvim' },
-
-  -- Copilot Chat for garbage code lmao
-  {
-    'CopilotC-Nvim/CopilotChat.nvim',
-    dependencies = {
-      { 'nvim-lua/plenary.nvim', branch = 'master' },
-    },
-    build = 'make tiktoken',
-    opts = {
-      window = {
-        layout = 'vertical',
-        width  = 0.35,
-        relative = 'editor',
-        position = 'right',
-      },
-      auto_insert_mode = false,
-      highlight_headers = true,
-      separator = '---',
-      show_folds = true,
-    },
-  },
 }
