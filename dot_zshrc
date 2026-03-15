@@ -12,7 +12,7 @@ alias grep='grep --color=auto'
 alias vim='nvim'
 
 alias goprojects='cd ~/projects'
-alias goconfig ='cd ~/.config'
+alias goconfig='cd ~/.config'
 
 PROMPT='%n@%m %1~ %# '
 . "$HOME/.cargo/env"
