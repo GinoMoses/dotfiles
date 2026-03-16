@@ -1,4 +1,7 @@
 return {
+    -- colorscheme
+    { 'Mofiqul/dracula.nvim' },
+
     -- markdown syntax highlighting
     {
       'MeanderingProgrammer/render-markdown.nvim',
@@ -12,15 +15,6 @@ return {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' },
-  },
-
-  -- Colorscheme
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    config = function()
-      vim.cmd('colorscheme rose-pine')
-    end,
   },
 
   -- Treesitter

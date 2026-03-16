@@ -17,7 +17,7 @@ y = 10
 style = "Underline"
 
 [font]
-size = 13.5
+size = 14
 
 normal.family = "JetBrainsMono Nerd Font"
 bold.family = "JetBrainsMono Nerd Font"
