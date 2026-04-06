@@ -1,4 +1,16 @@
 return {
+    -- testing
+    {
+        dir = "~/projects/mfiles",
+        name = "mfiles",
+        config = function()
+            require("mfiles").setup()
+        end,
+        kets = {
+            { "<leader>e", "<cmd>Mfiles<cr>", desc = "open Mfiles" },
+        }
+    },
+
     -- colorscheme
     { 'Mofiqul/dracula.nvim' },
 
@@ -26,11 +38,23 @@ return {
   },
 
   -- Utilities
+  { 'nvim-tree/nvim-web-devicons' },
   { 'theprimeagen/harpoon' },
   { 'mbbill/undotree' },
   { 'tpope/vim-fugitive' },
   { 'lambdalisue/suda.vim' },
-
+  { 'vyfor/cord.nvim' },
+  {
+    "folke/lazydev.nvim",
+    ft = "lua", -- only load on lua files
+    opts = {
+      library = {
+        -- See the configuration section for more details
+        -- Load luvit types when the `vim.uv` word is found
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
   -- LSP (lsp-zero)
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -60,7 +84,7 @@ return {
         placement          = 'right',
         width              = 35,
         backends           = { 'lsp', 'treesitter', 'markdown', 'man' },
-        open_automatic     = false,
+        open_automatic     = true,
         focus_on_jump      = false,
         layout             = { default_direction = 'right', placement = 'edge' },
         highlight_on_hover = true,
@@ -68,7 +92,4 @@ return {
       })
     end,
   },
-
-  -- snacks.nvim (required by claudecode)
-  { 'folke/snacks.nvim' },
 }

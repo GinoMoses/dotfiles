@@ -29,3 +29,7 @@ eval "$(starship init zsh)"
 
 export PATH=$PATH:/home/gm/.spicetify
 export PATH=$PATH:~/.spicetify
+
+[ -f "/home/gm/.ghcup/env" ] && . "/home/gm/.ghcup/env" # ghcup-env
+# opencode
+export PATH=/home/gm/.opencode/bin:$PATH
