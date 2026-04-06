@@ -1,0 +1,27 @@
+@theme "~/.config/rofi/spotlight.rasi"
+
+configuration {
+    modi:               "drun,run,calc";
+    show-icons:         true;
+    icon-theme:         "Papirus";
+    drun-display-format: "{name}";
+    display-drun:       "";
+    display-run:        "";
+    display-window:     "";
+    window-format:       "{w} - {c} - {t}";
+
+    matching:           "fuzzy";
+    sort:               true;
+    sorting-method:     "fzf";
+    case-sensitive:     false;
+
+    cycle:              true;
+    sidebar-mode:       false;
+    hover-select:       false;
+
+    prompt:             " ";
+
+    default-mode:       "drun";
+
+    font:               "SF Pro Display 14";
+}

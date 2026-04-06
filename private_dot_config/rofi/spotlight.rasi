@@ -1,0 +1,170 @@
+/**
+ * Rofi macOS Spotlight Theme
+ * Place in: ~/.config/rofi/spotlight.rasi
+ */
+
+* {
+    /* Palette */
+    bg:         #1c1c1ecc;
+    bg-alt:     #2c2c2e99;
+    bg-hover:   #3a3a3c99;
+    fg:         #f2f2f7ff;
+    fg-dim:     #8e8e93ff;
+    accent:     #0a84ffff;
+    border-col: #3a3a3c88;
+    radius:     18px;
+
+    /* Reset */
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0;
+    margin:           0;
+    padding:          0;
+    spacing:          0;
+}
+
+window {
+    background-color: @bg;
+    border-radius:    @radius;
+    border:           1px;
+    border-color:     @border-col;
+    width:            620px;
+    x-offset:         0;
+    y-offset:         -120px;
+
+    /* Centered on screen */
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, message, listview ];
+    padding:          12px 0px 12px 0px;
+}
+
+/* ── Search bar ─────────────────────────────────── */
+
+inputbar {
+    background-color: transparent;
+    children:         [ prompt, entry ];
+    padding:          0px 16px 10px 16px;
+    border:           0px 0px 1px 0px;
+    border-color:     @border-col;
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @fg-dim;
+    font:             "SF Pro Display 16";
+    padding:          8px 8px 8px 0px;
+    /* Acts as a search icon label – set prompt: "⌕ " in config */
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    font:             "SF Pro Display 17";
+    padding:          8px 0px;
+    placeholder:      "Search apps...";
+    placeholder-color: @fg-dim;
+    cursor:           text;
+}
+
+/* ── Results list ───────────────────────────────── */
+
+listview {
+    background-color: transparent;
+    padding:          8px 0px 0px 0px;
+    lines:            8;
+    columns:          1;
+    fixed-height:     false;
+    cycle:            true;
+    scrollbar:        false;
+    layout:           vertical;
+    spacing:          2px;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    10px;
+    margin:           0px 8px;
+    padding:          7px 10px;
+    orientation:      horizontal;
+    spacing:          10px;
+    cursor:           pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @bg-hover;
+    text-color:       @fg;
+}
+
+element selected.urgent {
+    background-color: @accent;
+    text-color:       @fg;
+}
+
+element selected.active {
+    background-color: @bg-hover;
+    text-color:       @fg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             32px;
+    cursor:           inherit;
+    border-radius:    6px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "SF Pro Display 14";
+    vertical-align:   0.5;
+    cursor:           inherit;
+    highlight:        bold;
+}
+
+/* ── Message / no results ───────────────────────── */
+
+message {
+    background-color: transparent;
+    padding:          0px 16px 4px 16px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @fg-dim;
+    font:             "SF Pro Display 12";
+}
+
+/* ── Scrollbar (hidden but defined) ─────────────── */
+
+scrollbar {
+    background-color: @bg-alt;
+    handle-color:     @fg-dim;
+    handle-width:     4px;
+    border-radius:    2px;
+    width:            4px;
+}
